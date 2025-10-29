@@ -14,7 +14,7 @@ const AboutMe = () => {
           About Me & My Goal
         </h2>
 
-        <div className="max-w-7xl w-full border border-gray-200 rounded-xl p-6 bg-gradient-to-r from-[#002243] via-[#00c8ff1a] to-[#002243] backdrop-blur-md shadow-lg animate-gradient">
+        <div className="max-w-7xl w-full border border-gray-200 rounded-xl p-6 bg-linear-to-r from-[#002243] via-[#00c8ff1a] to-[#002243] backdrop-blur-md shadow-lg animate-gradient">
           <Swiper
             navigation={true}
             modules={[Navigation]}

@@ -1,9 +1,9 @@
 "use client";
-import Download from "@/components/icon/Download";
 import Image from "next/image";
-import React from "react";
+import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import ParticlesHero from "./ParticleBackground";
+import ContactSection from "../Contact/Contact";
 const Hero = () => {
   return (
     <div className="flex items-center justify-center h-screen text-white flex-col">
@@ -26,10 +26,13 @@ const Hero = () => {
         </h1>
         <h2 className="flex mt-8 text-base sm:text-xl md:text-2xl lg:text-3xl">
           Hi! I'm Kien - is a
-          <span className="text-[#F25912] ml-2">
+          <span className="ml-2">
             <Typewriter
               options={{
-                strings: ["Frontend developer", "NodeJS developer"],
+                strings: [
+                  '<span class="text-[#F25912] transition-colors duration-500">Frontend developer</span>',
+                  '<span class="text-[#59AC77] transition-colors duration-500">NodeJS developer</span>',
+                ],
                 autoStart: true,
                 loop: true,
                 deleteSpeed: 50,
@@ -38,10 +41,37 @@ const Hero = () => {
             ></Typewriter>
           </span>
         </h2>
-        <button className="flex items-center justify-center py-3 px-6 gap-2 bg-blue-600 text-white text-center rounded hover:bg-blue-500 transition-all duration-200 cursor-pointer mt-8">
-          <Download className="text-white shrink-0 size-5"></Download>
-          <p className="whitespace-nowrap">Download CV</p>
-        </button>
+        <motion.blockquote
+          className="mt-8 italic text-white text-sm border-l-2 border-cyan-500/30 pl-4"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+        >
+          "Always learning, always improving — because technology never stands
+          still."
+        </motion.blockquote>
+        <motion.blockquote
+          className="mt-8 italic text-white text-sm border-l-2 border-cyan-500/30 pl-4 text-nowrap"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+        >
+          "I may not have become the person I want to be yet, but I must be
+          different from who I once was!"
+        </motion.blockquote>
+        <motion.blockquote
+          className="mt-8 italic text-white text-sm border-l-2 border-cyan-500/30 pl-4 flex flex-col items-center justify-center "
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+        >
+          "It’s not that the result won’t come — it just hasn’t come yet
+          <strong className="text-center mx-auto text-cyan-300 drop-shadow-[0_0_15px_rgba(0,200,255,0.5)]">
+            Like wine, the longer it’s aged, the richer its flavor{" "}
+            <span className="text-white">!"</span>
+          </strong>{" "}
+        </motion.blockquote>
+        <ContactSection></ContactSection>
       </div>
     </div>
   );

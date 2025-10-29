@@ -25,7 +25,7 @@ import {
 
 import { MdOutlineWidgets } from "react-icons/md";
 import { FaMagic } from "react-icons/fa";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 
 export const frontendSkills = [
   { name: "Next.js", icon: <SiNextdotjs color="#FFFFFF" /> },
@@ -62,6 +62,8 @@ function SkillSection({
   title: string;
   skills: { name: string; icon: ReactNode }[];
 }) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [swiperInstance, setSwiperInstance] = useState<any>(null);
   return (
     <div>
       <h3 className="text-lg md:text-xl font-semibold text-white mb-6 flex items-center gap-2">
@@ -73,8 +75,8 @@ function SkillSection({
         modules={[Autoplay]}
         slidesPerView={4}
         spaceBetween={24}
-        loop={true}
-        speed={6000}
+        loop
+        speed={1500}
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
@@ -84,7 +86,6 @@ function SkillSection({
           640: { slidesPerView: 3 },
           1024: { slidesPerView: 5 },
         }}
-        allowTouchMove={true}
         className="w-full"
       >
         {skills.map((s, i) => (

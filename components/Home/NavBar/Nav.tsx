@@ -3,9 +3,9 @@
 import Code from "@/components/icon/Code";
 import Download from "@/components/icon/Download";
 import { NavLinks } from "@/constants/nav";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
-
+import { motion } from "framer-motion";
+import { FaRegHandshake } from "react-icons/fa6";
 interface IProps {
   handleShowMenu: () => void;
 
@@ -37,8 +37,34 @@ const Nav = ({ handleShowMenu, showMenuBar }: IProps) => {
           <div className="font-bold text-2xl">KO DEV</div>
         </div>
         {/* Nav item */}
-        <div className="hidden lg:flex lg:items-center md:space-x-6 lg:space-x-7">
-          {NavLinks.map((link) => {
+        <div className="hidden lg:flex lg:items-center lg:justify-center ">
+          {/* Icon waving hello */}
+          <motion.div
+            className="flex items-center gap-2 mb-3"
+            animate={{ rotate: [0, 15, 0, 15, 0] }}
+            transition={{
+              repeat: Infinity,
+              duration: 2.5,
+              ease: "easeInOut",
+            }}
+          >
+            <p className="text-4xl">👋</p>
+            {/* <FaRegHandshake className="text-cyan-300 text-3xl drop-shadow-[0_0_10px_rgba(0,255,255,0.4)]" />
+            <h3 className="text-2xl font-semibold tracking-wide text-cyan-300">
+              Nice to meet you!
+            </h3> */}
+          </motion.div>
+          <motion.p
+            className="text-white mb-6 text-sm sm:text-lg max-w-md mt-4"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            Hello recruiter, thanks visit my portfolio
+          </motion.p>
+          {/* Thanks for visiting my portfolio 👋 I'm always looking to connect
+            with recruiters! */}
+          {/* {NavLinks.map((link) => {
             return (
               <Link
                 href={link.url}
@@ -48,45 +74,26 @@ const Nav = ({ handleShowMenu, showMenuBar }: IProps) => {
                 <p>{link.label}</p>
               </Link>
             );
-          })}
+          })} */}
         </div>
         <button
           className="ml-2 block cursor-pointer text-white lg:hidden"
           onClick={() => handleShowMenu()}
         >
-          {!showMenuBar ? (
-            // Icon Hamburger khi menu đóng
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          ) : (
-            // Icon X khi menu mở
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18 18 6M6 6l12 12"
-              />
-            </svg>
-          )}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-8"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
         </button>
       </div>
     </div>
