@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -25,6 +25,7 @@ import {
 
 import { MdOutlineWidgets } from "react-icons/md";
 import { FaMagic } from "react-icons/fa";
+import { ReactNode } from "react";
 
 export const frontendSkills = [
   { name: "Next.js", icon: <SiNextdotjs color="#FFFFFF" /> },
@@ -59,7 +60,7 @@ function SkillSection({
   skills,
 }: {
   title: string;
-  skills: { name: string; icon: JSX.Element }[];
+  skills: { name: string; icon: ReactNode }[];
 }) {
   return (
     <div>
