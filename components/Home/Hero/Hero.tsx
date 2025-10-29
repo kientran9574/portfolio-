@@ -40,7 +40,7 @@ const Hero = () => {
         </h2>
         <button className="flex items-center justify-center py-3 px-6 gap-2 bg-blue-600 text-white text-center rounded hover:bg-blue-500 transition-all duration-200 cursor-pointer mt-8">
           <Download className="text-white shrink-0 size-5"></Download>
-          <p className="whitespace-nowrap"> Download CV</p>
+          <p className="whitespace-nowrap">Download CV</p>
         </button>
       </div>
     </div>
