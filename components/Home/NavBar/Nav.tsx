@@ -24,7 +24,7 @@ const Nav = ({ handleShowMenu, showMenuBar }: IProps) => {
   }, []);
   return (
     <div
-      className={`transition-all duration-200 h-[10vh] z-30 fixed w-full ${
+      className={`transition-all duration-200 h-[10vh] z-30 fixed w-full  ${
         navBar ? "bg-[#0f142ed9] shadow-md" : "fixed"
       }`}
     >

@@ -8,7 +8,7 @@ import { FaRegHandshake } from "react-icons/fa6";
 const ContactSection = () => {
   return (
     <motion.div
-      className="flex flex-col items-center mt-8 text-center relative"
+      className="flex flex-col items-center mt-8 text-center relative pb-12"
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.6, duration: 0.6 }}
