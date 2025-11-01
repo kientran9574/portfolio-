@@ -9,13 +9,16 @@ const Hero = () => {
     <div className="flex items-center justify-center h-screen text-white flex-col">
       <ParticlesHero></ParticlesHero>
       <div className="flex flex-col items-center ">
-        <Image
-          src={"/images/s1.jpg"}
-          alt="image"
-          width={150}
-          height={150}
-          className="rounded-full border-8 border-[#0c0c48aa]"
-        ></Image>
+        <div className="w-[220px] h-[220px] rounded-full overflow-hidden border-8 border-[#0c0c48aa]">
+          <Image
+            src="/images/kien.jpg"
+            alt="Kien"
+            width={220}
+            height={220}
+            className="object-cover w-full h-full"
+          />
+        </div>
+
         <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl mt-6 font-bold">
           KO DEV is a role main{" "}
           <span className="text-[#F25912]">Frontend developer</span>,<br />{" "}

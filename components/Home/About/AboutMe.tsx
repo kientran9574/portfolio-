@@ -138,7 +138,7 @@ const AboutMe = () => {
                 >
                   <div className="relative w-[350px] h-[350px] lg:w-[420px] lg:h-[420px] rounded-2xl overflow-hidden shadow-xl ring-2 ring-cyan-500/40">
                     <Image
-                      src="/images/s1.jpg"
+                      src="/images/kien_1.jpg"
                       alt="About Me"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-700 ease-out"
@@ -211,9 +211,10 @@ const AboutMe = () => {
                 >
                   <div className="relative w-[350px] h-[350px] lg:w-[420px] lg:h-[420px] rounded-2xl overflow-hidden shadow-xl ring-2 ring-cyan-500/40">
                     <Image
-                      src="/images/c4.png"
+                      src="/images/kien_2.jpg"
                       alt="Future Goal"
                       fill
+
                       className="object-cover hover:scale-105 transition-transform duration-700 ease-out"
                     />
                   </div>
